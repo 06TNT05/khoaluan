@@ -1,0 +1,136 @@
+<div class="row  mb-3 mt-2">
+    <h3 class="col text-center">Tạo đề thi</h3>
+    <!-- <div class="col-md-4 mx-auto">
+        <div class="input-group">
+            <input class="form-control border border-dark rounded-pill" 
+              type="search" placeholder="Search" id="txtSearchExam">
+        </div>
+    </div> -->
+  </div>
+  
+  <div class="d-flex flex-row mb-3">
+  
+    <form id="frmExamCompilation" class="form-group col d-flex flex-column card p-3 me-4">
+      <div class="row">
+
+        <div class="row">
+          <div class="col">
+            <label for="time">Tên đề thi</label>
+            <input class="form-control" type="text" name="txtExamName" id="txtExamName" placeholder="Nhập tên đề thi">
+          </div>
+          <div class="col">
+            <label for="time">Thời gian thi</label>
+            <input class="form-control" type="number" name="txtTime" id="txtTime" value="0" min="0">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="selSubject">Học phần</label>
+            <select class="form-select" id="selSubject" name="selSubject">
+    
+            </select>
+          </div>
+      
+          <div class="col">
+            <label for="questionType">Loại câu hỏi</label>
+            <select class="form-select" id="selQuestionType" name="selQuestionType">
+    
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-4 ms-1">
+            <input class="form-check-input me-2" type="checkbox" name="ckbExamType" id="ckbExamType" value="1">
+            <label for="txtExamType" class="form-check-label">Đề mở</label>
+          </div>
+
+          <div class="col">
+            <label for="txtClassNumber">Khóa</label>
+            <input class="form-control" type="number" name="classNumber" id="txtClassNumber" value="0" min="0">
+          </div>
+        </div>
+      </div>
+      <div class="card mt-3 px-3 pb-3" id="divTopic" style="overflow-y:scroll">
+        <p class="text-center mt-3">Không có chủ đề</p>
+      </div>
+    </form>
+  
+    <div class="col row card p-3 me-1">
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <label for="examContent">Nội dung</label>
+        </div>
+
+        <div class="col text-end" id="containerBtnAddExam">
+
+        </div>
+      </div>
+      <hr class="mt-3">
+      <div name="examContent" id="examContent" style="overflow-y:scroll; max-height: 70vh;" class="pt-1">
+      
+      </div>
+    </div>
+  
+  </div>
+  
+  <div id="backToTopExam" class="backToTop" style="display: none;"><i class="bi bi-chevron-double-up"></i></div>
+  
+  <input type="hidden" id="questionIdHidden">
+  <input type="hidden" id="action">
+
+  <div id="examPDF" class="d-none">
+    <div class="row">
+      <div class="col-5 text-center">
+        <p class="text-uppercase m-0" id="universityName">Trường Đại học Quy Nhơn</p>
+        <p class="text-uppercase m-0">Khoa <span id="departmentName">Công nghệ thông tin</span></p>
+        <hr class="w-50 m-auto opacity-100" />
+      </div>
+      <div class="col-7 text-center">
+        <p class="text-uppercase fw-bold m-0">Cộng hòa xã hội chủ nghĩa Việt Nam</p>
+        <p class="m-0 fw-bold">Độc lập - Tự do - Hạnh phúc</p>
+        <hr class="w-50 m-auto opacity-100" />
+      </div>
+    </div>
+
+    <p class="text-uppercase fw-bold m-0 text-center my-4" id="examNameParagraph">Đề thi kết thúc học phần hệ đại học chính quy</p>
+
+    <div class="row">
+      <div class="col">
+        <p class="fw-bold m-0">Học phần: <span id="subjectName"></span></p>
+        <p class="fw-bold m-0">Mã học phần: <span id="subjectId"></span></p>
+      </div>
+      <div class="col position-relative">
+        <p class="fw-bold m-0">Số tín chỉ: <span id="credit"></span></p>
+        <p class="fw-bold m-0">Khóa: <span id="classNumber"></span></p>
+        <div class="px-3 position-absolute test">
+          <div style="margin-top: 8px">Duyệt của Bộ môn</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="m-0">
+        <span class="fw-bold">Thời gian làm bài: </span>
+        <span class="fw-bold" id="examTime">90</span>
+        <span class="fw-bold"> phút</span>
+        <span class="fst-italic">(Không kể thời gian phát đề)</span>
+      </p>
+    </div>
+    <div class="row text-center">
+      <p class="m-0 fst-italic" style="font-size: 13px;">
+        (Sinh viên được &nbsp
+        <input type="checkbox" class="form-check-input p-2" id="ckbYes"></input> &nbsp không được &nbsp
+        <input type="checkbox" class="form-check-input p-2" id="ckbNo"></input> &nbsp
+        sử dụng tài liệu tham khảo để làm bài)
+      </p>
+    </div>
+    <hr class="opacity-100 mt-2" />
+    <div id="examContentForm">
+      123
+    </div>
+    <div class="d-flex justify-content-center">
+      <hr class="opacity-100 mt-1 w-25" />
+    </div>
+  </div>
+  

@@ -1,0 +1,135 @@
+
+  <div class="row  mb-3 mt-2">
+    <h3 class="col">Quản lý giảng viên</h3>
+    <div class="col-md-4 mx-auto">
+        <div class="input-group">
+            <input class="form-control border border-dark rounded-pill" 
+              type="search" placeholder="Search" id="txtSearchLecturer">
+            <!-- <span class="input-group-append">
+                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span> -->
+        </div>
+    </div>
+  </div>
+
+  <div class="row border border-secondary pt-3 pb-4 mx-1">
+    <div class="col-10 row d-flex flex-column">
+      <form id="frmLecturer">
+        <div class="row">
+
+          <div class="col">
+            <label for="txtID">Mã giảng viên</label>
+            <input id="txtID" type="text" class="form-control" placeholder="Nhập mã giảng viên" name="lecturerId">
+          </div>
+
+          <div class="col">
+            <label for="txtName">Họ tên</label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nhập tên giảng viên" name="lecturerName">
+          </div>
+
+          <div class="col"></div>
+        </div>
+        <div class="row">
+
+          <div class="col">
+            <label for="txtPhone">Số điện thoại</label>
+            <input id="txtPhone" type="tel" class="form-control" placeholder="Nhập số điện thoại" name="phoneNumber">
+          </div>
+
+          <div class="col">
+            <label for="txtEmail">Email</label>
+            <input id="txtEmail" type="email" class="form-control" placeholder="Nhập email " name="email">
+          </div>
+          <div class="col">
+            <label for="selRole">Phân quyền</label>
+            <select id="selRole" class="form-select" aria-label="Phân quyền" name="selRole">
+
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            <label for="selSubDepartment">Tổ bộ môn</label>
+            <select id="selSubDepartment" class="form-select" aria-label="Tổ bộ môn" name="selSubDepartment">
+
+            </select>
+          </div>
+
+          <div class="col">
+            <label for="selOffice">Chức vụ</label>
+            <select id="selOffice" class="form-select" aria-label="Chức vụ" name="selOffice">
+
+            </select>
+          </div>
+
+          <div class="col">
+            <label for="filePicture">Hình ảnh</label>
+            <input id="filePicture" type="file" class="form-control" name="picture">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-2 d-flex flex-column justify-content-center">
+      <button type="button" class="btn btn-warning mt-4" id="btnResetLecturer">Làm mới</button>
+      <button type="button" class="btn btn-success mt-4" id="btnSaveLecturer" disabled>Lưu</button>
+    </div>
+
+    <div class="row d-flex flex-row mt-1 ms-2 d-none" id="subject-container">
+      
+    </div>
+
+    <div class="mt-2 ms-1" id="externalSubjectContainer">
+      <input type="checkbox" name="ckbExternalSubject" id="ckbExternalSubject">
+      <label for="ckbExternalSubject">Trợ giảng tổ khác</label>
+    </div>
+  </div>
+
+  <div class="row d-flex flex-row mt-3" id="lecturerPagination">
+    <div class="row col">
+      <button class="btnPagination mx-3 py-1" id="btnFirst" title="First"><<</button>
+      <button class="btnPagination" id="btnPrevious" title="Previous"><</button>
+    </div>
+    <div class="row col justify-content-end">
+      <button class="btnPagination" id="btnNext" title="Next">></button>
+      <button class="btnPagination mx-3" id="btnLast" title="Last">>></button>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover mt-2">
+    <thead>
+      <tr>
+        <th width="3%" class="text-center"><input type="checkbox" name="ckbAll" id="ckbAll"></th>
+        <th width="7%">Mã GV</th>
+        <th width="19%">Họ tên</th>
+        <th width="12%">Số điện thoại</th>
+        <th width="21%">Email</th>
+        <th width="12%">Hình ảnh</th>
+        <th width="15%">Chức vụ</th>
+        <th>Tình trạng</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyLecturer">
+
+    </tbody>
+  </table>
+
+  <div class="row mb-2">
+    <div class="col-1">
+      <button type="button" id="btnDeleteLecturer" class="btn btn-danger px-5">Xóa</button> 
+    </div>
+    <div class="col-5">
+
+    </div>
+    <div class="col-5">
+      <input id="file" type="file" class="form-control" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+    </div>
+    <div class="col-1">
+      <button class="btn btn-primary" id="btnImportLecturer">Nhập</button>
+    </div>
+  </div>
+  <div id="backToTopLecturer" class="backToTop" style="display: none;"><i class="bi bi-chevron-double-up"></i></div>
+  <input type="hidden" id="action">

@@ -1,0 +1,46 @@
+
+    <h3 class="text-center mb-3 mt-2">Quản lý tổ bộ môn</h3>
+
+    <form class="row border border-secondary pt-3 pb-4 mx-1" id="frmSubDepartment">
+        <div class="col">
+            <label for="txtID">Mã bộ môn</label>
+            <input id="txtID" type="text" class="form-control" placeholder="Nhập mã bộ môn" name="departmentId">
+        </div>
+        <div class="col">
+            <label for="txtName">Tên bộ môn</label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nhập tên bộ môn" name="departmentName">
+        </div>
+        <div class="col">
+            <label for="selDepartment">Khoa</label>
+            <select name="selDepartment" id="selDepartment" class="form-select" aria-label="Khoa">
+            </select>
+        </div>
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+            <button type="button" class="btn btn-warning w-50" id="btnResetSubDepartment">Làm mới</button>
+
+            <button type="button" class="btn btn-success w-50 mt-3" id="btnSaveSubDepartment" disabled>Lưu</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered table-hover mt-2">
+        <thead>
+        <tr>
+            <th width="5%" class="text-center"><input type="checkbox" name="ckbAll" id="ckbAll"></th>
+            <th width="18%">Mã bộ môn</th>
+            <th width="32%">Tên bộ môn</th>
+            <th width="32%">Thuộc khoa</th>
+            <th>Tình trạng</th>
+        </tr>
+        </thead>
+        <tbody id="tbodySubDepartment">
+
+        </tbody>
+    </table>
+
+    <div class="row mb-3">
+        <div class="col-1">
+          <button type="button" id="btnDeleteSubDepartment" class="btn btn-danger px-5">Xóa</button> 
+        </div>
+    </div>
+
+    <input type="hidden" id="action">

@@ -1,0 +1,81 @@
+        <div class="row  mb-3 mt-2">
+          <h3 class="col">Quản lý học phần</h3>
+          <div class="col-md-4 mx-auto">
+              <div class="input-group">
+                  <input class="form-control border border-dark rounded-pill" 
+                    type="search" placeholder="Search" id="txtSearchSubject">
+                  <!-- <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </span> -->
+              </div>
+          </div>
+        </div>
+        <form class="row border border-secondary pt-3 pb-3 mx-1" id="frmSubject">
+          <div class="col-2">
+            <label for="txtID">Mã học phần</label>
+            <input id="txtID" type="text" class="form-control" placeholder="Nhập mã học phần" name="subjectId">
+          </div>
+          <div class="col-3">
+            <label for="txtName">Tên học phần</label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nhập tên học phần" name="subjectName">
+          </div>
+          <div class="col-2">
+            <label for="txtCreditQuanity">Số tín chỉ</label>
+            <input id="txtCreditQuanity" type="number" min="1" class="form-control" placeholder="Nhập số tín chỉ" name="credit">
+          </div>
+          <div class="col-3">
+            <label for="selSubDepartment">Tổ bộ môn</label>
+            <select name="selSubDepartment" id="selSubDepartment" class="form-select" aria-label="Tổ bộ môn">
+
+            </select>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+            <button type="button" class="btn btn-warning w-50" id="btnResetSubject">Làm mới</button> 
+            <button type="button" class="btn btn-success w-50 mt-3" id="btnSaveSubject" disabled>Lưu</button>
+          </div>
+        </form>
+
+        <div class="row d-flex flex-row mt-3" id="subjectPagination">
+          <div class="row col">
+            <button class="btnPagination mx-3 py-1" id="btnFirst" title="First"><<</button>
+            <button class="btnPagination" id="btnPrevious" title="Previous"><</button>
+          </div>
+          <div class="row col justify-content-end">
+            <button class="btnPagination" id="btnNext" title="Next">></button>
+            <button class="btnPagination mx-3" id="btnLast" title="Last">>></button>
+          </div>
+        </div>
+
+        <table class="table table-bordered table-hover mt-2">
+          <thead>
+            <tr>
+              <th width="5%" class="text-center"><input type="checkbox" name="ckbAll" id="ckbAll"></th>
+              <th width="10%">Mã học phần</th>
+              <th width="38%">Tên học phần</th>
+              <th width="10%">Số tín chỉ</th>
+              <th width="24%">Thuộc tổ bộ môn</th>
+              <th>Tình trạng</th>
+            </tr>
+          </thead>
+          <tbody id="tbodySubject">
+
+          </tbody>
+        </table>
+
+        <div class="row mb-3">
+          <div class="col-1">
+            <button type="button" id="btnDeleteSubject" class="btn btn-danger px-5">Xóa</button> 
+          </div>
+          <div class="col-5">
+            
+          </div>
+          <div class="col-5">
+            <input id="file" type="file" class="form-control" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+          </div>
+          <div class="col-1">
+            <button class="btn btn-primary" id="btnImportSubject">Nhập</button>
+          </div>
+        </div>
+    <input type="hidden" id="action">

@@ -1,0 +1,139 @@
+<div class="row  mb-3 mt-2">
+  <h3 class="col">Biên soạn câu hỏi</h3>
+  <div class="col-md-4 mx-auto">
+      <div class="input-group">
+          <input class="form-control border border-dark rounded-pill" 
+            type="search" placeholder="Search" id="txtSearchQuestion">
+      </div>
+  </div>
+</div>
+
+<form id="frmQuestionCompilation">
+
+  <div class="form-group row">
+    <div class="col">
+      <label for="selSubject">Học phần</label>
+      <select class="form-select selSubjectQuestion" id="selSubject" name="selSubject">
+          <option>Tin học cơ bản</option>
+          <option>Tự luận</option>
+      </select>
+    </div>
+    
+    <div class="col">
+      <label for="selLevel">Chủ đề</label>
+      <select class="form-select" id="selTopic" name="selTopic">
+          <option>Chọn chủ đề</option>
+      </select>
+    </div>
+    
+    <div class="col">
+      <label for="selLevel">Mức độ</label>
+      <select class="form-select" id="selLevel" name="selLevel">
+
+      </select>
+    </div>
+
+    <div class="col">
+      <label for="questionType">Loại câu hỏi</label>
+      <select class="form-select selQuestionTypeQuestion" id="selQuestionType" name="selQuestionType">
+        <option>Chọn chủ đề</option>
+        <option value="TN">Trac nghiem</option>
+        <option value="TL">TL</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    
+  </div>
+
+  <div class="form-group mt-2">
+    <label for="question">Câu hỏi:</label>
+    <div class="form-control" id="question" contenteditable="true" name="question" style="min-height: 15vh;"></div>
+  </div>
+
+  <div class="form-group" id="multipleChoiceOptions" style="display: none;">
+    <label for="optionA">Đáp án A</label>
+    <input type="text" class="form-control" id="optionA" name="optionA">
+    <label for="optionB">Đáp án B</label>
+    <input type="text" class="form-control" id="optionB" name="optionB">
+    <label for="optionC">Đáp án C</label>
+    <input type="text" class="form-control" id="optionC" name="optionB">
+    <label for="optionD">Đáp án D</label>
+    <input type="text" class="form-control" id="optionD" name="optionB">
+    <label for="answer">Đáp án đúng</label>
+    <select class="form-select" id="selAnswer" name="selAnswer">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+  </div>
+
+  <div class="form-group" id="essayAnswer" style="display: none;">
+    <label for="essay">Đáp án:</label>
+    <textarea class="form-control" id="essay" rows="3"></textarea>
+  </div>
+
+  <div class="form-group row mt-3">
+    <div class="col d-flex">
+      <button type="button" class="btn btn-primary w-50" id="btnAttach">Chèn ảnh</button>
+    </div>
+
+    <div class="col d-flex justify-content-center">
+      <button type="button" class="btn btn-warning w-50" id="btnReset">Làm mới</button>
+    </div>
+
+    <div class="col d-flex justify-content-end">
+      <button type="button" class="btn btn-success w-50" id="btnSave">Lưu</button>
+    </div>
+  </div>  
+</form>
+
+<div class="row d-flex flex-row mt-3" id="questionPagination">
+  <div class="row col">
+    <button class="btnPagination mx-3 py-1" id="btnFirst" title="First"><<</button>
+    <button class="btnPagination" id="btnPrevious" title="Previous"><</button>
+  </div>
+  <div class="row col justify-content-end">
+    <button class="btnPagination" id="btnNext" title="Next">></button>
+    <button class="btnPagination mx-3" id="btnLast" title="Last">>></button>
+  </div>
+</div>
+
+<table class="table table-bordered table-hover mt-3">
+  <thead>
+    <tr>
+      <th width="3%" class="text-center"><input type="checkbox" name="ckbAll" id="ckbAll"></th>
+      <th width="7%">Chủ đề</th>
+      <th width="30%">Câu hỏi</th>
+      <th width="28%">Đáp án</th>
+      <th width="10%">Ngày tạo</th>
+      <th width="12%">Giảng viên</th>
+      <th>Tình trạng</th>
+    </tr>
+  </thead>
+  <tbody id="tbodyQuestion">
+
+  </tbody>
+</table>
+
+<div class="row mb-3">
+  <div class="col-1">
+    <button type="button" id="btnDeleteQuestion" class="btn btn-danger px-5">Xóa</button> 
+  </div>
+  <div class="col-5"></div>
+  <div class="col-5">
+    <input id="fileImport" type="file" class="form-control" name="fileImport" multiple="multiple"
+    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel,
+    .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" id="btnImportQuestion">Nhập</button>
+  </div>
+</div>
+
+<div id="backToTopQuestion" class="backToTop" style="display: none;"><i class="bi bi-chevron-double-up"></i></div>
+
+<input type="hidden" id="questionIdHidden">
+<input type="hidden" id="action">

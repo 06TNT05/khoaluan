@@ -1,0 +1,41 @@
+:root {
+    --white: #ffffff;
+    --red: #ff1515;
+    --primary: #1cdde7;
+    --width-pagination: 50px;
+}
+
+.fa-primary-color {
+    color: var(--primary);
+}
+
+.fa-dangerous-color {
+    color: var(--red);
+}
+
+i.edit:hover, i.delete:hover {
+    cursor: pointer;
+}
+
+.btnPagination {
+    width: var(--width-pagination);
+}
+
+.btnPagination:hover {
+    background-color: var(--primary);
+}
+
+.error {
+    display: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f00;
+}
+
+input[type=checkbox] {
+    transform: scale(1.6);
+}
+
+td .form-check {
+    display: table-cell;
+}
