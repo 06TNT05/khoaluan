@@ -6,15 +6,15 @@ $('.side-bar .nav-item .nav-link').mouseenter(function() {
     $(this).removeClass('active')
 })
 
-let scriptDepartment = `<script src="../assets/js/department.js"></script>`
-let scriptSubDepartment = `<script src="../assets/js/subDepartment.js"></script>`
-let scriptLecturer = `<script src="../assets/js/lecturer.js"></script>`
-let scriptSubject = `<script src="../assets/js/subject.js"></script>`
-let scriptOffice = `<script src="../assets/js/office.js"></script>`
-let scriptTopic = `<script src="../assets/js/topic.js"></script>`
-let scriptQuestionCompilation = `<script src="../assets/js/questionCompilation.js"></script>`
-let scriptExamCompilation = `<script src="../assets/js/examCompilation.js"></script>`
-let scriptAccount = `<script src="../assets/js/account.js"></script>`
+let scriptDepartment = `<script src="../khoaluan/assets/js/department.js"></script>`
+let scriptSubDepartment = `<script src="../khoaluan/assets/js/subDepartment.js"></script>`
+let scriptLecturer = `<script src="../khoaluan/assets/js/lecturer.js"></script>`
+let scriptSubject = `<script src="../khoaluan/assets/js/subject.js"></script>`
+let scriptOffice = `<script src="../khoaluan/assets/js/office.js"></script>`
+let scriptTopic = `<script src="../khoaluan/assets/js/topic.js"></script>`
+let scriptQuestionCompilation = `<script src="../khoaluan/assets/js/questionCompilation.js"></script>`
+let scriptExamCompilation = `<script src="../khoaluan/assets/js/examCompilation.js"></script>`
+let scriptAccount = `<script src="../khoaluan/assets/js/account.js"></script>`
 
 // xử lý hiển thị thông tin account hoặc nút đăng Nhập
 $(document).ready(function() {
@@ -52,7 +52,7 @@ $(document).on('click', '#questionCompilation', function (e) {
     
     e.preventDefault()
 
-    if (!$("head script[src='../assets/js/questionCompilation.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/questionCompilation.js']").length) {
         $('head').append(scriptQuestionCompilation)
     }
     
@@ -63,7 +63,7 @@ $(document).on('click', '#examCompilation', function (e) {
     
     e.preventDefault()
 
-    if (!$("head script[src='../assets/js/examCompilation.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/examCompilation.js']").length) {
         $('head').append(scriptExamCompilation)
     }
 
@@ -74,7 +74,7 @@ $(document).on('click', '#changePassword', function (e) {
     
     e.preventDefault()
 
-    if (!$("head script[src='../assets/js/account.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/account.js']").length) {
         $('head').append(scriptAccount)
     }
 
@@ -94,7 +94,7 @@ $(document).on('click', '#logout', function () {
 
 $(document).on('click', '#department', function() {
 
-    if (!$("head script[src='../assets/js/department.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/department.js']").length) {
         $('head').append(scriptDepartment)
     }
 
@@ -103,7 +103,7 @@ $(document).on('click', '#department', function() {
 
 $(document).on('click', '#subDepartment', function() {
 
-    if (!$("head script[src='../assets/js/subDepartment.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/subDepartment.js']").length) {
         $('head').append(scriptSubDepartment)
     }
 
@@ -112,7 +112,7 @@ $(document).on('click', '#subDepartment', function() {
 
 $(document).on('click', '#lecturer', function() {
 
-    if (!$("head script[src='../assets/js/lecturer.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/lecturer.js']").length) {
         $('head').append(scriptLecturer)
     }
     
@@ -121,7 +121,7 @@ $(document).on('click', '#lecturer', function() {
 
 $(document).on('click', '#subject', function() {
 
-    if (!$("head script[src='../assets/js/subject.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/subject.js']").length) {
         $('head').append(scriptSubject)
     }
 
@@ -130,7 +130,7 @@ $(document).on('click', '#subject', function() {
 
 $(document).on('click', '#office', function() {
 
-    if (!$("head script[src='../assets/js/office.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/office.js']").length) {
         $('head').append(scriptOffice)
     }
 
@@ -139,7 +139,7 @@ $(document).on('click', '#office', function() {
 
 $(document).on('click', '#topic', function() {
 
-    if (!$("head script[src='../assets/js/topic.js']").length) {
+    if (!$("head script[src='../khoaluan/assets/js/topic.js']").length) {
         $('head').append(scriptTopic)
     }
 
