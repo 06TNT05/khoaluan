@@ -82,14 +82,14 @@ $(document).on('click', '#changePassword', function (e) {
 })
 
 $(document).on('click', '#loginButton', function () {
-    $(location).prop('href', './html/login.html')
+    $(location).prop('href', './login.html')
 })
 
 $(document).on('click', '#logout', function () {
 
     sessionStorage.clear()
 
-    $(location).prop('href', './html/login.html')
+    $(location).prop('href', './login.html')
 })
 
 $(document).on('click', '#department', function() {
