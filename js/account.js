@@ -54,7 +54,7 @@ function changePassword(formData) {
             user.account.password = formData.get('newPassword')
             sessionStorage.setItem('user', JSON.stringify(user))
 
-            $(location).prop('href', '../html/index.html')
+            $(location).prop('href', '../index.html')
         }
     }).fail(function (jqXHR, textStatus, errorThrown) {
         console.log(textStatus);

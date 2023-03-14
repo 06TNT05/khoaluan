@@ -57,7 +57,7 @@ function login() {
         sessionStorage.setItem("user", JSON.stringify(user))
         sessionStorage.setItem("role", user.account.role.roleName)
 
-        $(location).prop('href', '../html/index.html')
+        $(location).prop('href', '../index.html')
     }).fail(function (data, textStatus, xhr) {
         $('.error').text(data.responseText)
     });
