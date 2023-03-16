@@ -289,6 +289,8 @@ function changeLecturerStatus(lecturerId, token) {
 // ham import giang vien bang file excel
 function importLecturer(formData) {
 
+    $('.loader_bg').show()
+
     $.ajax({
         url: `${URL_LECTURER_API}/upload`,
         type: 'POST',
@@ -306,9 +308,13 @@ function importLecturer(formData) {
             findAllObjectsPagination(URL_LECTURER_API, $("#page").val(), searchString, renderLecturerList)
 
             resetLecturerForm()
+
+            $('.loader_bg').hide()
         }
     }).fail(function () {
         console.log("failed")
+
+        $('.loader_bg').hide()
     });
 }
 

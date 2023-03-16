@@ -6,6 +6,8 @@ $('.side-bar .nav-item .nav-link').mouseenter(function() {
     $(this).removeClass('active')
 })
 
+
+
 let scriptDepartment = `<script src="./assets/js/department.js"></script>`
 let scriptSubDepartment = `<script src="./assets/js/subDepartment.js"></script>`
 let scriptLecturer = `<script src="./assets/js/lecturer.js"></script>`
@@ -18,6 +20,8 @@ let scriptAccount = `<script src="./assets/js/account.js"></script>`
 
 // xử lý hiển thị thông tin account hoặc nút đăng Nhập
 $(document).ready(function() {
+
+    $('.loader_bg').hide()
 
     let user = JSON.parse(sessionStorage.getItem("user"))
     let info = '';
@@ -45,7 +49,7 @@ $(document).ready(function() {
             $(this).addClass('disabled')
         })
     }
-
+    
 })
 
 $(document).on('click', '#questionCompilation', function (e) {

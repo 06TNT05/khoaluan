@@ -721,6 +721,8 @@ function insertNodeAtCursor(node) {
 
 function uploadFile(questionFormData) {
 
+    $('.loader_bg').show()
+
     $.ajax({
         url: `${URL_QUESTION_API}/uploadFile`,
         type: 'POST',
@@ -732,7 +734,7 @@ function uploadFile(questionFormData) {
     }).done(function (data, status, xhr) {
         
         if (xhr.status == OK) {
-            
+
             //$('#question').html(data)
             let searchString = $.trim(sessionStorage.getItem("searchQuestion"))
             getTotalRecord(URL_QUESTION_API, "searchQuestion")
@@ -751,13 +753,18 @@ function uploadFile(questionFormData) {
                         renderSubjectListWithChangeToSelect(data)
                     }
                 }).fail(function () {
+                    
                     console.log("failed")
                 });
             }
 
             $('#fileImport').val('')
+
+            $('.loader_bg').hide()
         }
     }).fail(function () {
+
+        $('.loader_bg').hide()
         console.log("failed")
     });
 }

@@ -173,6 +173,8 @@ $(document).on('change', 'input[name="delete"]', function() {
 // ham import giang vien bang file excel
 function importSubject(formData) {
 
+    $('.loader_bg').show()
+
     $.ajax({
         url: `${URL_SUBJECT_API}/upload`,
         type: 'POST',
@@ -188,9 +190,13 @@ function importSubject(formData) {
             let searchString = $.trim(sessionStorage.getItem("searchSubject"))
             getTotalRecord(URL_SUBJECT_API, "searchSubject")
             findAllObjectsPagination(URL_SUBJECT_API, $('#page').val(), searchString, renderSubjectList)
+
+            $('.loader_bg').hide()
         }
     }).fail(function () {
         console.log("failed")
+
+        $('.loader_bg').hide()
     });
 }
 
