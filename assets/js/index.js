@@ -85,7 +85,9 @@ $(document).on('click', '#loginButton', function () {
     $(location).prop('href', './login.html')
 })
 
-$(document).on('click', '#logout', function () {
+$(document).on('click', '#logout', function (e) {
+
+    e.preventDefault()
 
     sessionStorage.clear()
 
