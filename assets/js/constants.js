@@ -1,4 +1,5 @@
-const BASE_URL = "https://localhost:8443/exam"
+//const BASE_URL = "https://localhost:8443/exam"
+const BASE_URL = "https://questionexambank.herokuapp.com/"
 
 const BASE_URL_API = `${BASE_URL}/api`
 const URL_DEPARTMENT_API = `${BASE_URL_API}/department`
