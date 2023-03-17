@@ -289,6 +289,8 @@ function addExam(examFormData) {
 
 function randomCreationExam(formData) {
 
+    $('.loader_bg').show()
+
     $.ajax({
         url: `${URL_EXAM_API}/random-creation`,
         type: 'GET',
@@ -338,9 +340,13 @@ function randomCreationExam(formData) {
 
                 $('#examContent').css('overflow-y', 'scroll')
             }
+
+            $('.loader_bg').hide()
         }
     }).fail(function () {
         console.log("failed")
+
+        $('.loader_bg').hide()
     });
 }
 
